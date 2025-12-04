@@ -1,0 +1,163 @@
+:root {
+	--font: Courier New, monospace;	
+	--black:#272727;
+	--dark-red:#cc241d;
+	--dark-green:#98971a;
+	--dark-yellow:#d79921;
+	--dark-blue:#458588;
+	--dark-magenta:#b16286;
+	--dark-cyan:#689d6a;
+	--light-gray:#a89984;
+	--dark-gray:#928374;
+	--light-red:#fb4035;
+	--light-green:#b8bb26;
+	--light-yellow:#fabd1f;
+	--light-blue:#83a598;
+	--light-magenta:#d3869b;
+	--light-cyan:#8ec07c;
+	--white:#ebdbb2;
+	--select-color:var(--black);
+	--select-background:var(--white);
+}
+
+::-moz-selection {
+  color: var(--select-color);
+  background-color: var(--select-background);
+}
+
+::selection {
+  color: var(--select-color);
+  background-color: var(--select-background);
+}
+
+body {
+	background-color: var(--dark-gray);
+	color: var(--black);
+	font-family: var(--font);
+	margin: 0;
+}
+
+code {
+	white-space: preserve;
+	background-color: #171717;
+	display: block;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+ul li::before {
+	content: "- ";
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.content {
+	padding-left: 18rem;
+}
+
+.content img {
+	max-height: 400px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.content article {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 3rem;
+	margin: 3rem;
+	font-size: 16pt;
+	line-height: 2;
+	border-radius: 2rem;
+}
+
+.content a {
+	color: var(--light-yellow);
+	text-decoration: none;
+}
+
+.content a:visited {
+	color: var(--dark-yellow);
+	text-decoration: none;
+}
+
+.content .datestamp {
+	font-size: 14pt;
+	line-height: 1;
+	font-style: italic;
+}
+
+.sidebar {
+	font-family: var(--font);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 18rem;
+	background-color: var(--black);
+}
+
+.sidebar-content {
+	padding: 1rem;
+	color: var(--white);
+}
+
+.sidebar-content a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.sidebar-content h1 a {
+	padding: 1rem;
+	font-size: 2em;
+	color: var(--dark-yellow);
+}
+
+.sidebar-content .navigation {
+	font-size: 1.5em;
+}
+
+.sidebar-content .navigation a:hover {
+	color: var(--black);
+	background-color: var(--white);
+}
+
+.fullpage-hero {
+	background-color: var(--black);
+	color: var(--white);
+	height: 100%;
+	max-height: 100%;
+	margin: 0;
+	padding: 10rem;
+}
+
+.fullpage-hero h1 {
+	color: var(--dark-yellow);
+	font-size: 10em;
+	margin: 0;
+}
+
+.fullpage-hero button {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	font-size: 1.5em;
+	font-family: var(--font);
+	border: none;
+	background-color: var(--dark-yellow);
+}
+
+.fullpage-hero button:hover {
+	background-color: var(--light-yellow);
+}
+
+.nothing {
+	padding-left: 3rem;
+}
+.nothing span {
+	color: var(--dark-gray);
+}
