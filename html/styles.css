@@ -45,6 +45,12 @@ code {
 	border-radius: 1rem;
 }
 
+p > code{
+	display: inline;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
 ul li::before {
 	content: "- ";
 }
