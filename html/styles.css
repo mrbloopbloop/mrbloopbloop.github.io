@@ -162,8 +162,9 @@ ul li {
 }
 
 .nothing {
-	padding-left: 3rem;
+	padding-left: 10rem;
 }
+
 .nothing span {
 	color: var(--dark-gray);
 }
