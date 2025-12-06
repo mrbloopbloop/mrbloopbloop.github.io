@@ -24,9 +24,11 @@
 <h2>Puzzle 1</h2>
 <p>The first puzzle has us figuring out a password. There is a dial numbered zero to ninetynine and instructions on how to spin the dial. The dial starts at the fifty position. Our password is defined as the number of times the dial is at the 0 position after completing a step in the instructions.</p>
 <h3>Thoughts</h3>
-<p>Some things that make this puzzle easier:
-- Using a dial is similar to fineite fields in math, so using the modulo operator could be useful
-- The instructions are in a file that is well formatted. Each instruction sits on its own line. This will be easier to parse.</p>
+<p>Some things that make this puzzle easier:</p>
+<ul>
+<li>Using a dial is similar to fineite fields in math, so using the modulo operator could be useful</li>
+<li>The instructions are in a file that is well formatted. Each instruction sits on its own line. This will be easier to parse.</li>
+</ul>
 <h4>Finite Fields</h4>
 <p>In math there is a useful concept called finite fields. We already use them intuitivly. A good example of a finite field is a clock. If we only look at the minute hand, it is always going to be somewhere between zero minutes and fiftynine minutes. One more minute after fifty nine and we wrap around to zero. This is very much like our dial in the puzzle. We will use that to our advantage.</p>
 <h4>Well Behaved Input</h4>
