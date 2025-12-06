@@ -167,3 +167,67 @@ ul li {
 .nothing span {
 	color: var(--dark-gray);
 }
+
+@media screen and (max-width: 1000px) {
+
+	.content { 
+		padding: 0;
+	}
+
+	.content .datestamp {
+		font-size: 1em;
+	}
+
+	.content article {
+		font-size: 2.25em;
+	}
+
+	.sidebar {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: auto;
+		width: 100%;
+	}
+
+	.sidebar .sidebar-content h1 {
+		font-size: 2.5em;
+	}
+
+	.sidebar .sidebar-content {
+		display: inline-flex;
+	}
+
+	.sidebar .navigation {
+		display: inline-flex;
+	}
+
+	.sidebar .navigation li {
+		padding: 1rem;
+		font-size: 2em;
+	}
+
+	.fullpage-hero h1 {
+		font-size: 15em;
+	}
+
+	.fullpage-hero p {
+		font-size: 2.5em;
+	}
+
+	.fullpage-hero button {
+		font-size: 2.5em;
+		padding: 2rem;
+	}
+
+	.nothing {
+		padding-left: 10rem;
+		font-size: 2.5em;
+	}
+	
+	.nothing span {
+		color: var(--dark-gray);
+	}
+
+}
