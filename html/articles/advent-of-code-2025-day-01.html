@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Advent of Code, 2025 - Day 1</title>
+<meta charset="utf-8"/>
+<link href="/styles.css" rel="stylesheet"/>
+<link href="/print.css" media="print" rel="stylesheet"/>
+</head>
+<body>
+<div class="sidebar">
+<div class="sidebar-content">
+<h1><a href="/">Nate</a></h1>
+<ul class="navigation">
+<li><a href="/articles">Articles</a></li>
+<li><a href="https://github.com/mrbloopbloop">Code</a></li>
+</ul>
+</div>
+</div>
+<div class="content">
+<article>
+<h1>Advent of Code, 2025 - Day 1</h1>
+<p class="datestamp">Dec 06, 2025 | Nathan Stevens</p>
+<hr/>
+<p>To view the complete puzzle, go <a href="https://adventofcode.com/2025/day/1">here</a></p>
+<h2>Puzzle 1</h2>
+<p>The first puzzle has us figuring out a password. There is a dial numbered zero to ninetynine and instructions on how to spin the dial. The dial starts at the fifty position. Our password is defined as the number of times the dial is at the 0 position after completing a step in the instructions.</p>
+<h3>Thoughts</h3>
+<p>Some things that make this puzzle easier:
+- Using a dial is similar to fineite fields in math, so using the modulo operator could be useful
+- The instructions are in a file that is well formatted. Each instruction sits on its own line. This will be easier to parse.</p>
+<h4>Finite Fields</h4>
+<p>In math there is a useful concept called finite fields. We already use them intuitivly. A good example of a finite field is a clock. If we only look at the minute hand, it is always going to be somewhere between zero minutes and fiftynine minutes. One more minute after fifty nine and we wrap around to zero. This is very much like our dial in the puzzle. We will use that to our advantage.</p>
+<h4>Well Behaved Input</h4>
+<p>In this puzzle our input is very well behaved. There are no errors or corruptions. We can lean on that. In the real world we would need to validate all the data before acting on it. It would be smart to write the code in such a way to allow for this validation to be added in the future.</p>
+<h3>Solution</h3>
+<p>The code I wrote uses a <code>processInstruction</code> function. This function takes an instruction string and the current possition as an integer and then returns the new position as an integer. In the <code>main</code> function I set the initial position and a password variable. I then opened the puzzle input and iterated over each line and used the <code>processInstruction</code> function on each line. Before ending each itteration, I would check if the possition was zero. If so, I incremented the password variable. Once the for loop was complete, I print the password.</p>
+<h2>Puzzle 2</h2>
+<p>Puzzle 2 reveals there is a new protocol to use! 
+Our new protocol will be almost identical to the previous one save for how we count our zeros. This new protocol includes any time our dial hits a zero <em>during</em> an instruction as well as after.</p>
+<h3>Thoughts</h3>
+<p>So with this we have to modify our <code>processInstruction</code> function. I suppose there could be a new version of the function that implements the zero check and returns the number of zeros instead of the new position.</p>
+<p>However, that wouldn't work because we lose track of the current possition. Perhaps use a dictionary or dataclass? That would work nicely. I will try using a dictionary.</p>
+<h3>Solution</h3>
+<p>I modified the previous <code>processInstruction</code> function. Instead of returning the position as an integer, it returned a dictionary with the position and number of times the dial showed a zero. With this I iterated over the file again this time keeping track of position and number of zeros.</p>
+<p>Apart from typos, this worked with no issues!</p></article>
+</div>
+</body>
+</html>
